@@ -27,14 +27,16 @@ class ofxOculusRift
   public:
 		
 	ofxOculusRift();
+
 	~ofxOculusRift();
 	
 	//set a pointer to the camera you want as the base perspective
 	//the oculus rendering will create a stereo pair from this camera
 	//and mix in the head transformation
 	ofCamera* baseCamera;
-	
+
 	bool setup();
+	bool setup( ofFbo::Settings& render_settings );
 	bool isSetup();
 	void reset();
 	bool lockView;
@@ -105,6 +107,7 @@ class ofxOculusRift
 
 
   private:
+	 
 	bool bSetup;
 	bool bUsePredictedOrientation;
 	bool bUseBackground;
