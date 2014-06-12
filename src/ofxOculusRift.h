@@ -98,7 +98,9 @@ class ofxOculusRift
 	ofFbo& getBackgroundTarget(){
 		return backgroundTarget;
 	}
-	
+	ofFbo& getRenderTarget(){
+        return renderTarget;
+    }
 	ofRectangle getOculusViewport();
 
     string getProductName();

@@ -727,7 +727,6 @@ int ofxOculusRift::getVersion(){
 }
 
 bool ofxOculusRift::isHD(){
-    // EZ: My SD is at version 2, but haven't tried with an HD yet, so this is just a guess.
-    return hmdInfo.Version > 2;
+    return hmdInfo.VResolution == 1080;
 }
 
